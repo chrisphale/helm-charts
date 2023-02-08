@@ -22,9 +22,18 @@ body:
   - type: textarea
     id: repro
     attributes:
-      label: How can we reproduce it (as minimally and precisely as possible)?
+      label: How can we reproduce it (as minimally and precisely as possible)?. Please include values file.
     validations:
       required: true
+      value: |
+        <details>
+        
+        ```console
+        $ helm get values <redpanda-release-name> -n <redpanda-release-namespace> --all
+        # paste output here
+        ```
+        
+        </details>
 
   - type: textarea
     id: additional
@@ -39,7 +48,7 @@ body:
         <details>
 
         ```console
-        $ helm -n <repdanda-release-namespace> list 
+        $ helm -n <redpanda-release-namespace> list 
         # paste output here
         ```
 
